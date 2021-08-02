@@ -1,0 +1,27 @@
+#app,
+main,
+.content-wrapper {
+    min-height: 100vh;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+/* custom bootstrap */
+.carousel-indicators {
+    bottom: -65px !important;
+}
+.carousel-indicators li {
+    opacity: 1 !important;
+    height: 25px !important;
+    width: 25px !important;
+    border-radius: 100% !important;
+}
+.carousel-indicators li:not(.active) {
+    background-image: url("../../public/img/icons/circle-blue.png");
+    background-size: cover;
+}
+.carousel-indicators li.active {
+    background-image: url("../../public/img/icons/circle-black.png");
+    background-size: cover;
+}

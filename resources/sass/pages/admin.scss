@@ -1,0 +1,31 @@
+.admin-panel {
+    background-color: #f2f2f2;
+    min-height: 1100vh;
+    .admin-panel-header {
+        text-align: center;
+        background-color: #9561e2;
+        color: #f2f2f2;
+        padding: 1.5rem 4rem;
+        border-bottom: 2px solid #000000;
+        margin-bottom: 2rem;
+    }
+    .admin-panel-upload__title {
+        text-align: center;
+    }
+    .admin-panel-upload__form {
+        border: 1px solid white;
+        padding: 2rem 0;
+        & button,
+        & input {
+            margin: 15px auto;
+            text-align: center;
+        }
+        & button {
+            border: 2px solid #9561e2;
+            font-weight: 600;
+            color: #9561e2;
+            border-radius: 5px;
+            width: 120px;
+        }
+    }
+}
