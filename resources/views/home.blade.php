@@ -35,7 +35,7 @@
     <div id="sobre" class="row  justify-content-center home-intro">
         <div class="col-md-11">
             <div class="row justify-content-between">
-                <div class="col-md-6 home-intro__carousel">
+                <div class="col-md-6 mt-5 home-intro__carousel">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mt-5 ">
                     <div class="home-intro_about">
                             <h1>LOREM IPSUM</h1>
                             <hr class="col-md-4 blue-strap"/>
@@ -94,7 +94,7 @@
     {{-- TRAVEL --}}
     <div class="row justify-content-center py-5 home-travel">
         <div class="col-md-11">
-            <div class="d-flex flex-column h-100 w-50 d-sm-none d-md-flex justify-content-center">
+            <div class="d-flex flex-column h-100 w-50 justify-content-center">
                 <h3>
                     ADIPISC NG ELIT
                 </h3>
@@ -207,7 +207,7 @@
     <div id="contato" class="row justify-content-center home-footer">
         <div class="col-md-11">
             <div class="row justify-content-around">
-                <div class="col-md-5 d-flex flex-column terms-container">
+                <div class="col-md-5 d-flex flex-column terms-container mb-2">
                 <h5>
                     ADIPISC NG ELIT
                 </h5>
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-2">
                     @if(session()->has('message'))
                         <div style="width: 250px; font-size: 1rem; font-weight: 600; color: white;" class="alert alert-success fixed-top mx-auto text-center alert-dismissible fade show" role="alert">
                             {{ session()->get('message') }}
@@ -247,18 +247,21 @@
                     <form class="contact-form" type  action="/" method = "post">
                         <div class="mb-3">
                             <label for="inputFullName" class="form-label">Nome Completo</label>
-                            <input type="text" name="fullname" class="form-control" id="inputFullName">
+                            <input type="text" required name="fullname" class="form-control" id="inputFullName">
+                            <div class="alert alert-warning d-none" style="opacity: 0.8;padding: 5px;margin-top: 5px;" id="name-alert" role="alert">
+                                Por favor, insira seu nome completo.
+                            </div>
                         </div>
                         <div class="mb-3">
                           <label for="inputEmail" class="form-label">Email</label>
-                          <input type="email" name="email" class="form-control" id="inputEmail">
+                          <input type="email" required name="email" class="form-control" id="inputEmail">
                         </div>
                         <div class="mb-3">
                             <label for="inputCellphone" class="form-label">Celular</label>
-                            <input type="text" name="cellphone" class="form-control" id="inputCellphone">
+                            <input type="text" required name="cellphone" class="form-control" id="inputCellphone">
                         </div>
                         <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="acceptTerms">
+                          <input type="checkbox" required class="form-check-input" id="acceptTerms">
                           <label class="form-check-label" for="acceptTerms">Concordo com os <a data-toggle="modal" data-target="#terms">TERMOS DE PRIVACIDADE</a></label>
                         </div>
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

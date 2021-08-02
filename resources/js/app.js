@@ -29,3 +29,19 @@ const validateCellphone = (value) => {
     value = value.replace(/(\d)(\d{4})$/, "$1-$2");
     return value;
 };
+
+/* validate fullname */
+let inputName = window.document.getElementById("inputFullName");
+let alertMessage = window.document.getElementById("name-alert");
+
+inputName.onkeydown = function () {
+    this.value = validateName(this.value);
+};
+
+const validateName = (value) => {
+    if (RegExp(/^\S+$/g).test(value)) alertMessage.classList.remove("d-none");
+    else alertMessage.classList.add("d-none");
+
+    value = value.replace(/\d/g, "");
+    return value;
+};

@@ -10035,6 +10035,24 @@ main,
   background-size: cover;
 }
 
+@media screen and (max-width: 991px) {
+  h3 {
+    font-size: 5rem !important;
+  }
+
+  a {
+    font-size: 95% !important;
+  }
+
+  .home-intro,
+.home-travel {
+    background-image: none !important;
+  }
+
+  .home-travel {
+    background-color: #93e3f3 !important;
+  }
+}
 .home-page {
   flex: 1;
   display: flex;
@@ -10202,7 +10220,7 @@ main,
 /* TRAVEL */
 .home-travel {
   min-height: 550px;
-  background-image: url(/images/travel-background.jpg?43a945eedb4b2fa7743f220f12ae0762);
+  background-image: url(/images/travel-background.jpg?f86e04f03c44f1800cafe475d70d90ca);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
