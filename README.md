@@ -1,4 +1,4 @@
-# laravel-lading-page
+# laravel-landing-page
 
 ## Rotas
 
